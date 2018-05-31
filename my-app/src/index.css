@@ -17,6 +17,13 @@ ol, ul {
   display: table;
 }
 
+.gameTitle{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    text-align: center;
+    font-size: 5em;
+}
+
 .status {
   margin-bottom: 10px;
 }
@@ -115,22 +122,33 @@ button{
 @media(max-width:992px){
   .game {
       display: grid;
-      grid: auto auto  / auto auto ;
-      align-content: space-evenly;
+      grid: auto auto auto auto / auto;
+      justify-content: center;
 
     }
 
+  .gameTitle{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 15px;
+  }
+
+
   .game-board{
     grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
     margin-bottom: 50px;
   }
 
   .game-info{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    justify-content: center;
   }
 
   .game-label{
@@ -142,6 +160,11 @@ button{
   .square {
     height: 25vw;
     width: 25vw;
+  }
+
+  .btn{
+     max-width: 992px;   
+     width: 90%;
   }
 }
 
